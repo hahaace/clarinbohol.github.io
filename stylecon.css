@@ -1,0 +1,252 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 40vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav {
+   display: flex;
+   padding: 2% 6%;
+   justify-content: space-between;
+   align-items: center;
+}
+img{
+   width: 150px;
+}
+.links{
+   flex: 1;
+   text-align: right;
+}
+.links ul li{
+   list-style: none;
+   display: inline-block;
+   padding: 8px 12px;
+   position: relative;
+}
+.links ul li a{
+   color: #fff;
+   text-decoration: none;
+   font-size: 13px;
+}
+.links ul li::after{
+   content: '';
+   width: 0%;
+   height: 2px;
+   background: #f44336;
+   display: block;
+   margin: auto;
+   transition: 0.5s;
+}
+.links ul li:hover::after{
+   width: 100%;
+}
+.text{
+   width: 700px;
+   color: #fff;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+}
+.text h1{
+   font-size: 80px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav .fa{
+   display: none;
+}
+@media( max-width: 700px){
+   .text h1{
+       font-size: 20px;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   }
+   .links ul li{
+       display: block;
+   }
+   .links{
+       position: absolute;
+       background: #74cf7b;
+       height: 100vh;
+       width: 200px;
+       top: 0;
+       right: -200px;
+       text-align: left;
+       z-index: 2;
+       transition: 1s;
+   }
+   nav .fa{
+       display: block;
+       color: #fff;
+       margin: 10px;
+       font-size: 22px;
+       cursor: pointer;
+   }
+   .links ul{
+       padding: 20px;
+   }
+}
+
+header{
+    position: absolute;
+    text-align: center;
+    width: 75%;
+    left: 12%;
+    top: 7rem;
+}
+header h1{
+    font-size: 30px;
+	color: white;
+}
+.empty{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: -1;
+}
+
+.content{
+    display: flex;
+    min-height: 100vh;
+}
+.content section{
+    margin-top: 8vh;
+    margin-left: 20vh;
+}
+.content-form{
+    margin-top: 3rem;
+	color: white;
+	font-size: 10px;
+}
+section i{
+    width: 40px;
+    height: 40px;
+    color:white;
+    text-align: center;
+	size: 100px;
+}
+.form{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 50%;
+    justify-content: center;
+    align-items: center;
+    min-height: 130vh;
+	color:white;
+	
+}
+
+.form .contact-form input{
+    width: 30rem;
+    background-color: transparent;
+    border: 0px;
+    border: transparent;
+    margin: 20px;
+    padding: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid #fff;
+}
+.form .contact-form input ~ span{
+    position: absolute;
+    left: 20px;
+    transition: 0.9s ease-in-out;
+    margin-top: 10px;
+}
+.form .contact-form input:focus ~span{
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+.form .contact-form textarea{
+    width: 30rem;
+    border: 0px;
+    background-color: transparent;
+    margin: 20px;
+    font-size: 17px;
+    border-bottom: 2px solid white;
+}
+.form .contact-form textarea ~ span
+{
+    position: absolute;
+    left: 20px;
+    margin-top: 10px;
+    transition: 0.9s ease-in-out;
+}
+.form .contact-form textarea:focus ~span{
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+.form .contact-form input[type=submit]{
+    background-color: dodgerblue;
+    border: 2px solid dodgerblue;
+    font-size: 18px;
+    width: 50%;
+    height: 40px;
+    margin-top: -5px;
+}
+.form .contact-form input[type=submit]:hover{
+    background-color: transparent;
+    color: dodgerblue;
+}
+.media{
+    position: absolute;
+    top: 100vh;
+    right: 20vh;
+    display: flex;
+    list-style: none;
+	color: white;
+}
+.media li{
+    margin: 20px 30px;
+}
+@media screen and (max-width: 900px){
+    body{
+        background-repeat: repeat-y;
+        overflow: auto;
+    }
+    header{
+        position: absolute;
+        left: 0;
+        top: 20%;
+        width: 100%;
+    }
+    .empty{
+        height: 210vh;
+    }
+    .form{
+        position: absolute;
+        top: 100vh;
+        margin-left: 10%;
+    }
+    .content-form{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0;
+        margin-top: 53vh;
+        margin-left: 10vh;
+    }
+    .content section{
+        margin-top: 0vh;
+        margin-left: 0vh;
+    }
+    .media{
+        position: absolute;
+        top: 190vh;
+        right: 30px;
+    }
+}
+section a{
+	color: white;
+}

@@ -1,0 +1,241 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	background: #2e2e41;
+	
+}
+.header{
+	 min-height: 40vh;
+	 width: 100%;
+	 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/bg.jpg);
+	 background-position: center;
+	 background-size: cover;
+	 position: relative;
+}
+nav {
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+}
+img{
+	width: 150px;
+}
+.links{
+	flex: 1;
+	text-align: right;
+}
+.links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+.links ul li a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 13px;
+}
+.links ul li::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #f44336;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+.links ul li:hover::after{
+	width: 100%;
+}
+.text{
+	width: 700px;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.text h1{
+	font-size: 80px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav .fa{
+	display: none;
+}
+@media only screen and ( min-width: 200px){
+	.text h1{
+		font-size: 20px;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	}
+	.links ul li{
+		display: block;
+	}
+	.links{
+		position: absolute;
+		background: #74cf7b;
+		height: 100vh;
+		width: 200px;
+		top: 0;
+		right: -200px;
+		text-align: left;
+		z-index: 2;
+		transition: 1s;
+	}
+	nav .fa{
+		display: block;
+		color: #fff;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+	.links ul{
+		padding: 20px 0px 0px;
+	}
+	.header{
+		min-height: 20vh;
+   }
+   .card {
+    position: relative;
+    width: auto;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 400px;
+}
+
+   .card .card_landing {
+    margin-left: 5px;
+
+}
+
+.card .card_landing h6 {
+    bottom: 10px;
+    left: 10px;
+    margin-left:25px ;
+}
+
+.card .card_info {
+    position: absolute;
+    width: 400px;
+    height: 90%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    margin-left: 50px;
+    padding: 15px;
+    background: #fff;
+    z-index: 90;
+    box-shadow: 0 5px 10px #000;
+    transition: .5s;
+}
+
+a img{
+    height: 50px;
+    width: 70px;
+    margin-left: 50px ;
+    margin-top: 10px;
+    
+}
+.title {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.profile{
+    margin: 10px;
+}
+.footer{
+	width: 100%;
+	text-align: center;
+	padding: 1px;
+	background: #74cf7b;
+    margin-top: 100px;
+}
+.footer h3{
+	margin-bottom: 70px;
+	margin-top: 10px;
+}
+}
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 400px;
+}
+
+.card .card_landing {
+    position: relative;
+    width: 450px;
+    height: 100%;
+    box-shadow: 0 5px 10px #000;
+    background: linear-gradient(transparent 80%, #000), var(--i);
+    background-position: center;
+    background-size: cover;
+    z-index: 100;
+}
+
+.card .card_landing h6 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 25px;
+    color: #fff;
+    margin-left:75px ;
+}
+
+.card .card_info {
+    position: absolute;
+    width: 400px;
+    height: 90%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    padding: 15px;
+    background: #fff;
+    z-index: 90;
+    box-shadow: 0 5px 10px #000;
+    transition: .5s;
+}
+.card:hover .card_info {
+    left: 430px;
+}
+
+a img{
+    height: 50px;
+    width: 70px;
+    margin-left: 100px ;
+    margin-top: 10px;
+    
+}
+.title {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.profile{
+    margin: 20px;
+}
+.footer{
+	width: 100%;
+	text-align: center;
+	padding: 1px;
+	background: #74cf7b;
+    margin-top: 100px;
+}
+.footer h3{
+	margin-bottom: 70px;
+	margin-top: 10px;
+	cursor: pointer;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
